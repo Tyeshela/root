@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables Project</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>CSS Variables Card</h2>
+    <p>Welcome to our customizable card!</p>
+    <div class="controls">
+      <label class="control-label" for="background">Background Color:</label>
+      <input class="control-input" type="color" id="background" onchange="updateCardStyles('--card-background', this.value)">
+
+      <label class="control-label" for="color">Text Color:</label>
+      <input class="control-input" type="color" id="color" onchange="updateCardStyles('--card-color', this.value)">
+
+      <label class="control-label" for="padding">Padding:</label>
+      <input class="control-input" type="range" id="padding" min="0" max="50" step="5" onchange="updateCardStyles('--card-padding', this.value + 'px')">
+
+      <label class="control-label" for="border-radius">Border Radius:</label>
+      <input class="control-input" type="range" id="border-radius" min="0" max="50" step="5" onchange="updateCardStyles('--card-border-radius', this.value + 'px')">
+    </div>
+  </div>
+
+  <script src="js/mine.js"></script>
+</body>
+</html>
